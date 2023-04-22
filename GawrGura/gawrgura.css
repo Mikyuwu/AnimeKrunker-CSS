@@ -1,0 +1,810 @@
+
+
+
+/* Warning !
+Do not use this one, use the main_custom.css because if krunker broke the css this file will not have the fix.
+That why there is two! One for updating the other one!
+*/
+
+
+
+/* global variables */
+
+:root {
+    --text-color: #3f3f3f;
+    --accent-color: #81a5f4;
+    --health-color: white;
+    --ammo-color: white;
+    --premium-color: #81a5f4;
+    --verified-color: #81a5f4;
+    --menu-bg-color: rgba(255, 255, 255, 1);
+    --menu-bg-color-secondary: rgba(230, 230, 230, 1);
+    --ingame-bg-color: rgba(15, 15, 15, .2);
+    --text-transform: none;
+}
+
+/* Loader */
+
+#initLoader :first-child, #loadHeader, #loadEditrBtn, #loadInfoRHolder, #loadInfoLHolder, #loadTipsHolder {
+	display: none;
+}
+
+#initLoader {
+    background: #364888 !important;
+}
+
+#loadGamNm {
+	font-size: 0!important;
+	position: relative;
+	top: 34%;
+	left: 40%;
+	width: 440px;
+	height: 400px;
+	transform: unset;
+    background-image: url("https://cdn.discordapp.com/attachments/551814040431886336/1038178960783188028/out-transparent-2.gif");
+    background-size: contain;
+}
+
+#loadGamNm::after {
+    content: "";
+    font-size: 33px !important;
+    position: fixed;
+    left: 50%;
+    top: calc(50% + 70px);
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* Font */
+
+@font-face {
+    font-family: gamefont;
+    src: url(https://raw.githubusercontent.com/South-Paw/typeface-vag-rounded/master/files/vag-rounded-400.woff2);
+}
+
+@font-face {
+    font-family: hpammo;
+    src: url(https://raw.githubusercontent.com/South-Paw/typeface-vag-rounded/master/files/vag-rounded-400.woff2);
+}
+
+/* Colors */
+
+#menuPingIcon, span.material-icons, #mapInfo {
+    color: var(--accent-color) !important;
+}
+
+#menuFPSDisplay, #menuPingDisplay, #menuPingText, #menuFPS, [style="color:#fbc02d"] {
+    color: white !important;
+}
+
+#menuLevelBar.progressBarInner {
+    background-image: linear-gradient(to right,#5184f5,var(--accent-color),94%,white) !important;
+}
+
+#menuItemContainer, .headerBar, #mLevelCont, .verticalSeparator, #policeButton:hover, .killStreakItem, .countIcon {
+    background-color: transparent !important;
+}
+
+/* Display none */
+#newsHolder, #headerRightSocial, #seasonLabel, #tlInfHold, #termsInfo, #hudClassIcon, #challIcon, #maxHP, #teamName, #ammoMax, #ammoIcon, #menuClassNameTag, #menuClassSubtext, #menuClassName, #healthBar, #ammoMax, #killsIcon,
+#deathsIcon, #streakIcon, #scoreCount .material-icons, #livesCount .material-icons, #aHider, #aHolder, .endAHolder, .setSugBox2, #onetrust-consent-sdk, #mainLogoFace, .menBtnIcn, #streamContainer, #mapInfoHld, #menuClassIcn {
+	display: none !important;
+} 
+
+/* Image */
+#mainLogo {
+    content: url(https://cdn.discordapp.com/attachments/551814040431886336/1038025717725794384/logo_1.png);
+}
+
+/* Header */
+#menuServerInfoContainer {
+    display: inline !important;
+    font-size: larger;
+}
+
+#menuFPSDisplay, #menuPingDisplay {
+    text-transform: var(--text-transform);
+    font-size: medium
+}
+
+#menuPingText {
+    font-size: medium
+}
+
+#mLevelCont {
+    position: relative;
+    bottom: 8px;
+    left: -20px;
+}
+
+.progressBar {
+    width: 117%;
+}
+
+.mainJunkInfo {
+    position: relative;
+    bottom: -02px
+}
+
+#menuAccountUsername {
+    position:relative;
+    bottom: 5px
+}
+
+span.material-icons {
+    position: relative;
+    bottom: 3px
+}
+
+/* Button bottom */
+
+.button {
+	background-color: transparent !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	text-transform: var(--text-transform);
+    border: none !important;
+}
+
+#subLogoButtons>.button:hover {
+    color: var(--accent-color) !important;
+}
+
+#menuBtnHost {
+	visibility: hidden;
+	font-size: 0 !important;
+}
+
+#menuBtnHost:after {
+	visibility: visible;
+	font-size: 18px !important;
+	content: 'Host';
+	text-transform: var(--text-transform);
+}
+
+.button:hover {
+	background-color: transparent !important;
+	color: var(--accent-color) !important;
+	-webkit-transform: none;
+	transform: none;
+    border: none !important;
+}
+
+.button.small {
+	font-size: 18px !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+}
+
+#subLogoButtons {
+	bottom: 80px;
+	transform: translateX(-50%);
+    border: none !important;
+}
+
+#menuBtnHost {
+	visibility: hidden;
+	font-size: 0 !important;
+}
+
+#menuBtnHost:after {
+	visibility: visible;
+	font-size: 18px !important;
+	content: 'Host';
+	text-transform: var(--text-transform);
+}
+
+#menuBtnBrowser {
+	visibility: hidden;
+	font-size: 0 !important;
+}
+
+#menuBtnBrowser:after {
+	visibility: visible;
+	font-size: 18px !important;
+	content: 'Servers';
+	text-transform: var(--text-transform);
+}
+
+#inviteButton {
+	visibility: hidden;
+	font-size: 0 !important;
+}
+
+#inviteButton:after {
+	visibility: visible;
+	font-size: 18px !important;
+	content: 'Invite';
+	text-transform: var(--text-transform);
+} 
+
+#menuBtnJoin{
+	visibility: hidden;
+	font-size: 0 !important;
+}
+
+#menuBtnJoin:after {
+	visibility: visible;
+	font-size: 18px !important;
+	content: 'Join';
+	text-transform: var(--text-transform);
+} 
+
+/*Bottom side*/
+
+#spectButton {
+	position: relative;
+}
+
+#menuBtnProfile {
+	visibility: hidden;
+	font-size: 0 !important;
+}
+
+#menuBtnProfile:after {
+	visibility: visible;
+	font-size: 18px !important;
+	content: 'Profile';
+	text-transform: var(--text-transform); 
+} 
+
+#menuBtnShop {
+	visibility: hidden;
+	font-size: 0 !important;
+}
+
+#menuBtnShop:after {
+	visibility: visible;
+	font-size: 18px !important;
+	content: 'Shop';
+	text-transform: var(--text-transform); 
+} 
+
+#menuItemContainer {
+	width: fit-content;
+	height: min-content;
+	top: unset;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	flex-direction: row;
+}
+
+.menuItem {
+	align-items: center;
+	background: transparent;
+	padding-bottom: 5px;
+	padding-left: 22px;
+	padding-right: 22px;
+	pointer-events: none;
+}
+
+.menuItem:hover {
+	background: transparent;
+	color: var(--accent-color);
+	border-left: none;
+}
+
+.menuItem:active {
+	background: transparent;
+	color: var(--accent-color);
+}
+
+.menuItem .menuItemTitle {
+	margin-top: 0;
+	color: #fff !important;
+	font-size: 18px !important;
+	text-transform: var(--text-transform);
+	pointer-events: all;
+	transition: all .2s;
+}
+
+.menuItemTitle:hover {
+	color: var(--accent-color) !important;
+}
+
+.menuItemTitle:active {
+	color: var(--accent-color) !important;
+}
+
+.menuItem .menuItemIcon {
+	position: relative;
+	width: 100%;
+	height: 45%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: none;
+}
+
+span.material-icons-outlined.menBtnIcn {
+	display: none
+}
+
+
+
+
+/* Chat */
+
+#chatInput {
+    background-color: transparent !important;
+    color: white !important;
+    font-size: 16px;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+	border: transparent
+}
+
+#uiBase.onMenu #chatHolder {
+    bottom: 20px !important;
+    left: 20px !important;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+#chatHolder {
+    bottom: 20px !important;
+    left: 20px !important;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+#chatList {
+	background-color: transparent !important;
+}
+
+
+#chatHolder::before {
+	content: "";
+    background-image: url(https://cdn.discordapp.com/attachments/551814040431886336/1038069923009806336/20220210_214805-PhotoRoom.png);
+    position: absolute;
+    width: 460px;
+    height: 540px;
+    bottom: -20%;
+    left: 590%;
+    background-size: cover;
+}
+
+#chatInputHolder {
+	background-color: transparent !important;
+	border: transparent !important;
+}
+
+#voiceDisplay {
+	background-color: transparent !important;
+	display: none !important;
+}
+
+.chatItem {
+    border-radius: 0;
+
+}
+
+.chatMsg[style*="color:#fc03ec"] {
+	color: var(--accent-color) !important;
+}
+
+/* Spec */
+
+#uiBase.onMenu #spectButton {
+	position: fixed;
+	left: 20px;
+	top: 85px;
+	transform: none;
+	text-transform: var(--text-transform);
+}
+
+#spectButton :not(.switchsml) {
+    color: white !important;
+}
+
+/* Ingame */
+
+#curGameInfo {
+	display: none;
+}
+
+#timerIcon {
+	display: none;
+}
+
+#timerDisplay {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border-radius: 99999px;
+    margin: 0;
+    height: 50px;
+    padding: 10px 20px;
+    line-height: 50px;
+    min-width: 150px;
+    text-align: center;
+}
+
+#timerVal {
+	color: white;
+    font-size: 50px;
+    padding: 0;
+    text-align: center;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#ingameFPS {
+    color: white !important;
+    visibility: visible;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#pingDisplay {
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#pingText {
+    color: white !important;
+}
+
+#pingIcon {
+    color: var(--accent-color) !important;
+}
+
+#pingDisplay .material-icons {
+    font-size: 22px;
+}
+
+.leaderScore {
+    margin-left: 8px;
+    text-align: right;
+    color: rgb(255 255 255 / 70%)
+}
+
+#healthBar {
+	display:none !important;
+}
+
+#weapDisplay {
+	display: none !important;
+}
+
+.weapKey {
+	display: none;
+}
+
+#weapDisplay {
+	display: none !important;
+}
+
+.weapIcon {
+    display: none !important;
+} /*ffa6bc*/
+
+
+#hudClassIcon {
+    display: none;
+}
+
+#healthValueHolder {
+    background-color: transparent;
+    width: 100px;
+    height: 65px;
+    border-radius: 10px;
+    position: fixed;
+    left: 30%;
+    bottom: 25%;
+    padding: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    align-items: center;
+}
+
+#healthValue {
+    color: var(--health-color);
+    font-family: hpammo;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-top: 0;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+    will-change: unset;
+	position: fixed;
+	left: 40%;
+	bottom: 25px;
+	font-size: 96px;
+}
+
+#maxHP {
+    display: none;
+}
+
+#challIcon {
+    display: inline-block !important;
+	position: fixed;
+    width: 50px;
+	height: 50px;
+	left: 36%;
+	bottom: 55px;
+	filter: brightness(0) invert(1) drop-shadow(2px 2px 3px rgba(30, 30, 30, .5));
+}
+
+#healthBar {
+    display: none;
+}
+
+#ammoDisplay {
+    position: fixed;
+    background-color: transparent;
+    background-image: url(https://dummyimage.com/1x1/ffffff/ffffff.png);
+    transform: none;
+    width: 50px;
+	height: 4px;
+	top: calc(50% + 35px);
+	left: calc(50% - 25px);
+    padding: 0;
+    padding-top: 0;
+    padding-left: 0;
+    border-radius: 0;
+}
+
+#ammoVal {
+    position: fixed;
+	font-size: 96px;
+	right: 40%;
+	bottom: 25px;
+    color: var(--ammo-color);
+    font-family: hpammo;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#ammoMax {
+    display: none;
+}
+
+#ammoIcon {
+    display: inline-block !important;
+	position: fixed;
+    width: 50px;
+	height: 50px;
+	right: 36%;
+	bottom: 55px;
+    margin-right: 0;
+	margin-left: 0;
+	filter: brightness(0) invert(1) drop-shadow(2px 2px 3px rgba(30, 30, 30, .5));
+}
+
+/* Right counters */
+
+.topRightCounters {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+.countIcon {
+    border-radius: 0;
+    margin-left: 20px;
+    margin-bottom: 0;
+    padding: 7px;
+}
+
+#deathsVal,
+#killsVal,
+#livesDisp,
+#streakVal,
+#myScoreVal {
+    color: white !important;
+    bottom: 7px;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#deathsVal::after,
+#killsVal::after,
+#streakVal::after,
+#myScoreVal::after,
+#livesDisp::after {
+    display: block;
+    position: fixed;
+    margin-top: 45px;
+    font-size: 14px;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#deathsVal::after {
+    content: 'Deaths';
+}
+
+#killsVal::after {
+    content: 'Kills';
+}
+
+#streakVal::after {
+    content: 'Streak';
+}
+
+#myScoreVal::after {
+    content: 'Score';
+}
+
+#livesDisp::after {
+    content: 'Lives';
+}
+
+.kfItem {
+    border-radius: 10px;
+    background-color: var(--ingame-bg-color);
+}
+
+#killStreakHolder {
+    position: fixed;
+    bottom: 75px;
+	right: 15px;
+	margin-right: 0;
+    margin-bottom: 0;
+}
+
+.killStreakItem {
+    width: 50px;
+    height: 50px;
+}
+
+/* Class */
+
+#menuClassContainer {
+	transform: scale(1);
+	transition: all 0.5s;
+	top: unset;
+	bottom: 620px;
+	right: unset;
+	left: 1850px;
+	pointer-events: all;
+	padding-bottom: 40px;
+}
+
+#menuClassContainer:hover #classPreviewCanvas, #menuClassContainer:hover div:last-child {
+	transform: unset !important;
+}
+
+#classPreviewCanvas, #menuClassContainer div:last-child {
+	transform: translateX(500px);
+	transition: all 0.5s;
+}
+
+#menuClassContainer:hover:before {
+	opacity: 0;
+}
+
+#menuClassContainer::before {
+	content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url(https://cdn.discordapp.com/attachments/551814040431886336/1038084792677306438/Arrow.png);
+    background-size: cover;
+    z-index: 900;
+    border-radius: 99999px;
+    transition: all 0.5s;
+    opacity: 1;
+    pointer-events: none;
+    position: fixed;
+    left: 75%;
+    top: 140px;
+    transform: translateX(-50%);
+}
+
+#classPreviewCanvas {
+	left: -500px
+}
+
+#policeButton {
+	left: 70px;
+	border: transparent !important
+}
+
+#policeButton:hover {
+    transform: unset;
+}
+
+
+#classInfoContainer {
+	display: none !important;
+}
+
+/* score */
+
+#teamScores {
+	position: fixed;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 685px;
+	height: 50px;
+	padding: 10px;
+	padding-left: 0;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	margin-left: 0;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: transparent;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+.tScore {
+	display: inline-block;
+}
+
+#tScoreV1 {
+	position: fixed;
+	left: -25%;
+	top: 4px;
+}
+
+#tScoreV2 {
+	position: fixed;
+	left: 25%;
+	top: 4px;
+}
+
+.tScoreT {
+	width: 100%;
+	margin-top: 12px;
+	text-align: center;
+	font-size: 24px;
+	color: white;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+	z-index: 2;
+}
+
+.tScoreM {
+	display: none;
+}
+
+.tScoreF {
+	left: 50%;
+	width: 90px;
+	height: 60px;
+	margin-left: 125px;
+	margin-right: 125px;
+	padding-left: 0;
+	padding-right: 0;
+	background-color: #eb5656;
+	color: transparent;
+	opacity: 50%;
+	z-index: 1;
+}
+
+.tScoreF.you {
+	background-color: #5699eb;
+	color: transparent;
+	opacity: 50%;
+	z-index: 1;
+}
+
+.tScoreC {
+	left: 50%;
+	width: 90px;
+	height: 60px;
+	margin-left: 125px;
+	margin-right: 125px;
+	background-color: var(--accent-color);
+	opacity: 50%;
+	z-index: 1;
+}
+
+.tScoreC.you {
+	background-color: white;
+	opacity: 50%;
+	z-index: 1;
+}
+
+#modVote {
+	display: none;
+}
