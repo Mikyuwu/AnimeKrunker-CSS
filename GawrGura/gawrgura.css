@@ -1,3 +1,4 @@
+
 /* global variables */
 
 :root {
@@ -392,6 +393,21 @@ span.material-icons-outlined.menBtnIcn {
 
 /* Ingame */
 
+#reloadMsg{
+	border: none;
+	background: transparent !important;
+	color: var(--accent-color);
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5) !important;
+	position: fixed;
+	left: 51%;
+	top: 90.75%
+}
+
+
+
+
+
+
 #curGameInfo {
 	display: none;
 }
@@ -687,7 +703,8 @@ span.material-icons-outlined.menBtnIcn {
 }
 
 #classPreviewCanvas {
-	left: -500px
+	position: relative;
+	left: 60px !important
 }
 
 #policeButton {
@@ -798,3 +815,14 @@ span.material-icons-outlined.menBtnIcn {
 #modVote {
 	display: none;
 }
+
+/*GatoAddons*/
+
+
+/*If using the AltManager Addons from GatoClient.
+I recommand you to modify the javascript to remove the "Alts" text just CTRL F and search Alts in notepad and remove all the "<span> Alts</span>".*/
+
+.altManage > span {
+	color: var(--accent-color) !important
+}
+
