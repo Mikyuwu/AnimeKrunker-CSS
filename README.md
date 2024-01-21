@@ -1,3 +1,3 @@
-# WaifuKrunker-CSS -- WORK IN PROGRESS
+# WaifuKrunker-CSS -- Outdated
 A little repo for Krunker CSS anime girl 
 
